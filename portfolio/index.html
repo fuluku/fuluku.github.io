@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thanaphon S. — Video Editor Portfolio</title>
+<meta name="description" content="Video editor for YouTube: police bodycam and true crime documentaries, faceless documentaries, Shorts and promo ads.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0f14;--panel:#121820;--line:#1f2a36;--ink:#e8eef2;--muted:#8fa3b3;--accent:#5fd0c8;--red:#e0473a}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+header{padding:56px 0 28px;border-bottom:1px solid var(--line)}
+.name{font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+h1{font-size:clamp(28px,5vw,46px);line-height:1.1;margin:0 0 14px;font-weight:800;letter-spacing:-.02em}
+h1 span{color:var(--accent)}
+.lede{color:var(--muted);max-width:680px;font-size:17px;line-height:1.6;margin:0 0 22px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 18px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--panel)}
+.btn.primary{background:var(--accent);color:#06201e;border-color:var(--accent)}
+nav.tabs{position:sticky;top:0;z-index:5;background:rgba(11,15,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:12px;padding-bottom:12px;scrollbar-width:none}
+.tab{flex:0 0 auto;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font:500 14px Inter,sans-serif;cursor:pointer}
+.tab[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+section.cat{padding:34px 0 8px}
+section.cat h2{font-size:22px;margin:0 0 4px}
+section.cat p.sub{color:var(--muted);margin:0 0 18px;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{position:relative;aspect-ratio:16/9;background:#05080b center/cover no-repeat;border:0;padding:0;cursor:pointer;width:100%;display:block}
+.thumb.vertical{aspect-ratio:16/9;background-size:contain}
+.thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.55))}
+.play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(11,15,20,.78);border:2px solid var(--ink);z-index:1}
+.play::before{content:"";position:absolute;left:22px;top:17px;border-left:18px solid var(--ink);border-top:12px solid transparent;border-bottom:12px solid transparent}
+.dur{position:absolute;right:10px;bottom:10px;z-index:1;font-size:12px;font-weight:600;background:rgba(0,0,0,.75);padding:3px 7px;border-radius:5px}
+.body{padding:14px 16px 16px}
+.body h3{font-size:17px;margin:0 0 6px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
+.tag{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(95,208,200,.35);border-radius:4px;padding:2px 6px}
+.body p{color:var(--muted);font-size:14px;line-height:1.55;margin:0}
+.src{display:block;margin-top:8px;font-size:12px;color:#6b7d8c}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:28px 0 48px;color:var(--muted);font-size:14px;line-height:1.6}
+dialog{border:0;padding:0;background:#000;width:min(1100px,96vw);border-radius:10px;overflow:hidden}
+dialog.vertical{width:min(420px,92vw)}
+dialog::backdrop{background:rgba(0,0,0,.85)}
+.frame{position:relative;aspect-ratio:16/9}
+dialog.vertical .frame{aspect-ratio:9/16}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.close{position:absolute;top:8px;right:8px;z-index:2;background:rgba(0,0,0,.7);color:#fff;border:1px solid #444;border-radius:6px;font:600 14px Inter,sans-serif;padding:6px 10px;cursor:pointer}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="name">Thanaphon S. · Video Editor · Thailand (UTC+7)</p>
+    <h1>Story-driven edits for <span>YouTube</span> — bodycam, documentary &amp; Shorts.</h1>
+    <p class="lede">I turn raw footage into videos people finish watching: clear structure, clean speaker captions, maps and data graphics, sound that never covers the voice. Every sample below is a portfolio edit of official or public-domain footage.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://www.upwork.com/freelancers/~015483de7dedf692d9">Hire me on Upwork</a>
+      <a class="btn" href="#bodycam">See bodycam work</a>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Categories">
+  <div class="wrap">
+    <button class="tab" data-f="all" aria-pressed="true">All</button>
+    <button class="tab" data-f="bodycam" aria-pressed="false">Bodycam &amp; True Crime</button>
+    <button class="tab" data-f="doc" aria-pressed="false">Documentary</button>
+    <button class="tab" data-f="shorts" aria-pressed="false">Shorts / Vertical</button>
+    <button class="tab" data-f="ads" aria-pressed="false">Promo Ads</button>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section class="cat" id="bodycam" data-cat="bodycam">
+    <h2>Bodycam &amp; True Crime</h2>
+    <p class="sub">Four distinct styles — pick one for your channel, or mix. All customizable to your brief.</p>
+    <div class="grid">
+      <article class="card">
+        <button class="thumb" data-id="1jNPePy-ux39MWt2ol4Uy0wcAueQG9Q2t" aria-label="Play Lights Behind Him"><span class="play"></span><span class="dur">3:41</span></button>
+        <div class="body"><div class="tags"><span class="tag">Style: Map + Data</span><span class="tag">Voiceover</span></div>
+          <h3>Lights Behind Him</h3>
+          <p>Dark news-documentary: glowing route map, dash-cam HUD with live clock and mini-map, data cards, timeline, speaker-colored captions, bleeps and name muting.</p>
+          <span class="src">Footage: Flagler County Sheriff's Office · Map © OpenStreetMap · Voiceover: AI</span></div>
+      </article>
+      <article class="card">
+        <button class="thumb" data-id="1GDx5UqV5O8iwndTsBbp9kPs8EYLcKS24" aria-label="Play The US-1 Joyride"><span class="play"></span><span class="dur">3:58</span></button>
+        <div class="body"><div class="tags"><span class="tag">Style: Investigation Board</span><span class="tag">3D</span></div>
+          <h3>The US-1 Joyride</h3>
+          <p>Case-file look with evidence board, paper textures, 3D vehicle recreation and red status tags. Minors are never named or shown.</p>
+          <span class="src">Footage: Flagler County Sheriff's Office · Voiceover: AI</span></div>
+      </article>
+      <article class="card">
+        <button class="thumb" data-id="1kNm9FxaJI_xCJbI9Xe7HNWDeC-1b1ke4" aria-label="Play Field Sobriety"><span class="play"></span><span class="dur">3:11</span></button>
+        <div class="body"><div class="tags"><span class="tag">Style: Raw Minimal</span><span class="tag">No voiceover</span></div>
+          <h3>Field Sobriety</h3>
+          <p>Lets the footage tell the story: black chapter cards, clean speaker captions, verified case facts on the end card.</p>
+          <span class="src">Footage: Flagler County Sheriff's Office</span></div>
+      </article>
+      <article class="card">
+        <button class="thumb" data-id="1W1yog5LScO9qkW7l5OlIJ2q2klvsRrdo" aria-label="Play Read me my rights"><span class="play"></span><span class="dur">3:16</span></button>
+        <div class="body"><div class="tags"><span class="tag">Style: News Doc</span></div>
+          <h3>"Read Me My Rights"</h3>
+          <p>Classic bodycam edit: hook, location bar, status tags, speaker-colored captions and profanity bleeps.</p>
+          <span class="src">Footage: Flagler County Sheriff's Office</span></div>
+      </article>
+      <article class="card">
+        <button class="thumb" data-id="1l2hnk66kBEOMlvwPVCZnHrwoq2CiuZtM" aria-label="Play 107 mph"><span class="play"></span><span class="dur">1:36</span></button>
+        <div class="body"><div class="tags"><span class="tag">Style: News Doc</span><span class="tag">Pursuit</span></div>
+          <h3>107 MPH</h3>
+          <p>A fast pursuit cut tight for retention, with speed callouts and clean captions.</p>
+          <span class="src">Footage: Flagler County Sheriff's Office</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cat" id="doc" data-cat="doc">
+    <h2>Faceless Documentary</h2>
+    <p class="sub">Archival footage, motion graphics and narration for long-form YouTube.</p>
+    <div class="grid">
+      <article class="card">
+        <button class="thumb" data-id="1WWBx73HmDObqlPI9RF2CSe_JFAzzkEy0" aria-label="Play The Crash That Broke America"><span class="play"></span><span class="dur">1:29</span></button>
+        <div class="body"><div class="tags"><span class="tag">Archival</span><span class="tag">.srt included</span></div>
+          <h3>The Crash That Broke America</h3>
+          <p>The 1929 stock market crash told through archival photos and film, with slow pans, sound design and a separate subtitle file.</p>
+          <span class="src">Footage: Library of Congress, Prelinger Archives (public domain) · Voiceover: AI</span></div>
+      </article>
+      <article class="card">
+        <button class="thumb" data-id="1CzLwZbD-U2oB7AJuv8fg9dmIOsCB8Xzl" aria-label="Play The $140,000 Mistake"><span class="play"></span></button>
+        <div class="body"><div class="tags"><span class="tag">Motion graphics</span><span class="tag">Finance</span></div>
+          <h3>The $140,000 Mistake</h3>
+          <p>A finance explainer built entirely from motion graphics: animated numbers, charts and kinetic type synced to narration.</p>
+          <span class="src">Voiceover: AI</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cat" id="shorts" data-cat="shorts">
+    <h2>Shorts / Vertical</h2>
+    <p class="sub">9:16 cuts with strong hooks and word-by-word captions.</p>
+    <div class="grid">
+      <article class="card">
+        <button class="thumb vertical" data-v="1" data-id="1t0HE1d6Bxx8RD0Az60fxnOR3_i0aybw-" aria-label="Play Field Sobriety Short"><span class="play"></span><span class="dur">0:40</span></button>
+        <div class="body"><div class="tags"><span class="tag">Bodycam Short</span><span class="tag">Karaoke captions</span></div>
+          <h3>Field Sobriety — Short</h3>
+          <p>A 40-second vertical cut of the full bodycam edit, built for YouTube Shorts and Reels.</p>
+          <span class="src">Footage: Flagler County Sheriff's Office</span></div>
+      </article>
+      <article class="card">
+        <button class="thumb vertical" data-v="1" data-id="10n19G7Y-lL4S65N7N4oQ0PC6C9yryOHM" aria-label="Play Yesterday's Coffee"><span class="play"></span><span class="dur">0:44</span></button>
+        <div class="body"><div class="tags"><span class="tag">Podcast → Short</span></div>
+          <h3>He Drinks Yesterday's Coffee</h3>
+          <p>Long-form science talk turned into a punchy Short with punch-in cuts and karaoke captions.</p>
+          <span class="src">Source: NASA × StarTalk (NASA media, public domain)</span></div>
+      </article>
+      <article class="card">
+        <button class="thumb vertical" data-v="1" data-id="1jNBvMOa3NarJh3_VIT9CFkFsQvtIC77_" aria-label="Play Feel 30 Again"><span class="play"></span><span class="dur">0:47</span></button>
+        <div class="body"><div class="tags"><span class="tag">Podcast → Short</span></div>
+          <h3>Space Makes You Feel 30 Again</h3>
+          <p>A second Short from the same conversation, showing a consistent caption style across a series.</p>
+          <span class="src">Source: NASA × StarTalk (NASA media, public domain)</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cat" id="ads" data-cat="ads">
+    <h2>Promo Ads</h2>
+    <p class="sub">Vertical product promos for Reels, TikTok and Meta.</p>
+    <div class="grid">
+      <article class="card">
+        <button class="thumb vertical" data-v="1" data-id="1TQY6J_CVJsDXP-z8XXENPuClMqhMoFo3" aria-label="Play SOLHA promo"><span class="play"></span></button>
+        <div class="body"><div class="tags"><span class="tag">Skincare</span><span class="tag">9:16</span></div>
+          <h3>SOLHA — Dew Veil</h3>
+          <p>Skincare product promo with a main cut and a shorter cutdown.</p></div>
+      </article>
+      <article class="card">
+        <button class="thumb vertical" data-v="1" data-id="1Z3EeTGDnxFp7znHNI-xXBD2ekHvRW8vY" aria-label="Play VELARRE promo"><span class="play"></span></button>
+        <div class="body"><div class="tags"><span class="tag">Fragrance</span><span class="tag">9:16</span></div>
+          <h3>VELARRE</h3>
+          <p>Luxury fragrance promo, paced for the first three seconds.</p></div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>All videos are sample edits made for this portfolio. Footage is from official law-enforcement releases or public-domain archives, credited on each video's end card.</p>
+    <p><a href="https://www.upwork.com/freelancers/~015483de7dedf692d9">Upwork profile</a></p>
+  </div>
+</footer>
+
+<dialog id="player" aria-label="Video player">
+  <button class="close" id="closeBtn">Close ✕</button>
+  <div class="frame"><iframe id="frame" title="Video" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+</dialog>
+
+<script>
+(function(){
+  var thumbs=document.querySelectorAll('.thumb');
+  thumbs.forEach(function(b){
+    b.style.backgroundImage='url(https://drive.google.com/thumbnail?id='+b.dataset.id+'&sz=w800)';
+    b.addEventListener('click',function(){
+      var d=document.getElementById('player');
+      d.classList.toggle('vertical',!!b.dataset.v);
+      document.getElementById('frame').src='https://drive.google.com/file/d/'+b.dataset.id+'/preview';
+      if(d.showModal)d.showModal();else d.setAttribute('open','');
+    });
+  });
+  var dlg=document.getElementById('player');
+  function shut(){document.getElementById('frame').src='about:blank';dlg.close();}
+  document.getElementById('closeBtn').addEventListener('click',shut);
+  dlg.addEventListener('click',function(e){if(e.target===dlg)shut();});
+  dlg.addEventListener('cancel',function(){document.getElementById('frame').src='about:blank';});
+  var tabs=document.querySelectorAll('.tab'),cats=document.querySelectorAll('section.cat');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-pressed',x===t?'true':'false');});
+    cats.forEach(function(c){c.hidden=!(t.dataset.f==='all'||c.dataset.cat===t.dataset.f);});
+    window.scrollTo({top:document.querySelector('nav.tabs').offsetTop,behavior:'smooth'});
+  });});
+})();
+</script>
+</body>
+</html>
